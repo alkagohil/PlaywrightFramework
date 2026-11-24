@@ -7,7 +7,7 @@ class LoginPage extends BasePage
   private readonly passwordInput:Locator;
   private readonly signInButton:Locator;
   private readonly logoutButton:Locator;
-  private readonly rememberMeCheckbox:Locator;
+
   constructor(page: Page)
   {
     super(page);
@@ -16,7 +16,7 @@ class LoginPage extends BasePage
     this.passwordInput = page.getByLabel("Password:");
     this.signInButton = page.getByRole("button",{name:'Log in'});   
     this.logoutButton = page.getByText("Log out");
-    this.rememberMeCheckbox = page.getByLabel("Remember me?");
+
   }
   async navigateToLoginPage()
   {
